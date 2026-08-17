@@ -1,0 +1,5 @@
+{
+  "canvas": {"width": 1200, "height": 675, "ratio": "16:9", "background": "#FFFFFF", "grid": 8},
+  "intent": {"core_message": "调研是一个闭环，不是发完问卷就结束", "subtitle": "选型 → 生成 → 匿名收集 → 聚合分析 → 行动计划", "composition": "flow", "focus_node": "collect"},
+  "style": {"theme": "geometry-minimal", "accent_color": "#2F6BFF", "line_weight": 1, "corner_radius": 0}
+}

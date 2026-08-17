@@ -1,0 +1,8 @@
+This package adapts concepts and methodology from the awesome-claude-corporate-skills repository.
+
+Upstream project: https://github.com/w95/awesome-claude-corporate-skills
+Upstream Skill: 03-human-resources/employee-engagement-survey
+Upstream commit: 78dbc7c719920610d5b1c60bd13d9bb52d711c7a
+License: MIT; see LICENSE.
+
+The five dimension templates (Q12, engagement × experience, eNPS, belonging & inclusion, psychological safety & teamwork), Chinese-context rewriting, Feishu/Lark CLI integration (survey generation, anonymous collection, Base aggregation, dashboards), local survey generator and results analyzer, anonymity safeguards (no personal identifiers, small-cell suppression), tests, and visual assets in this package are project additions.

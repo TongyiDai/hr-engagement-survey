@@ -1,0 +1,5 @@
+{
+  "canvas": {"width": 1200, "height": 675, "ratio": "16:9", "background": "#FFFFFF", "grid": 8},
+  "intent": {"core_message": "匿名是这份信任的地基", "subtitle": "去个人标识 · 只看分组 · 小样本自动抑制", "composition": "anonymity", "focus_node": "aggregate"},
+  "style": {"theme": "geometry-minimal", "accent_color": "#2F6BFF", "line_weight": 1, "corner_radius": 0}
+}

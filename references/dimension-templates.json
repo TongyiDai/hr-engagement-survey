@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "scale": {
+      "type": "likert-5",
+      "min": 1,
+      "max": 5,
+      "labels": {
+        "1": "非常不同意",
+        "2": "不同意",
+        "3": "一般",
+        "4": "同意",
+        "5": "非常同意"
+      },
+      "note": "除 eNPS 采用 0–10 推荐意愿量表外，其余题目统一使用 1–5 李克特量表，保证同比与跨组可比。"
+    },
+    "segment_fields": [
+      {"key": "department", "label": "部门", "type": "single_select"},
+      {"key": "level", "label": "层级", "type": "single_select", "options": ["个人贡献者", "基层管理者", "中层管理者", "高层"]},
+      {"key": "tenure", "label": "司龄", "type": "single_select", "options": ["0–6 个月", "6–12 个月", "1–3 年", "3 年以上"]},
+      {"key": "location", "label": "办公地点", "type": "single_select"},
+      {"key": "work_mode", "label": "办公方式", "type": "single_select", "options": ["现场", "远程", "混合"]}
+    ],
+    "forbidden_fields": ["姓名", "工号", "邮箱", "手机号", "身份证", "IP", "设备号", "花名", "座位号"]
+  },
+  "templates": {
+    "q12": {
+      "name": "Q12 敬业度",
+      "source": "Gallup Q12",
+      "scenario": "最经典最短，快速测敬业度基线",
+      "dimensions": [
+        {"key": "expectation", "label": "角色与期待", "questions": ["我知道工作中对我的期待是什么。", "我有把工作做好所需要的材料和设备。"]},
+        {"key": "strengths", "label": "发挥所长", "questions": ["在工作中，我每天都有机会做我最擅长的事。"]},
+        {"key": "recognition", "label": "认可与关怀", "questions": ["最近七天里，我因为工作做得好而受到过认可或表扬。", "工作中有人关心我这个人。"]},
+        {"key": "development", "label": "成长与发展", "questions": ["工作中有人鼓励我发展。", "最近半年，有人和我谈过我的进步。", "在工作中，我有学习和成长的机会。"]},
+        {"key": "voice_purpose", "label": "被听见与使命感", "questions": ["工作中我的意见似乎有人重视。", "公司的使命或目标让我觉得自己的工作很重要。"]},
+        {"key": "teamwork", "label": "协作与质量", "questions": ["我的同事们致力于把工作做好。", "工作中我有一位很要好的朋友。"]}
+      ]
+    },
+    "engagement_experience": {
+      "name": "敬业度 × 员工体验",
+      "source": "Gallup + 员工体验框架",
+      "scenario": "全面年度调研，可支撑行动规划",
+      "dimensions": [
+        {"key": "engagement", "label": "整体敬业度", "questions": ["我对自己的工作充满投入和热情。", "我的工作让我有清晰的价值感。", "我愿意把这里推荐给朋友来工作。"]},
+        {"key": "management", "label": "管理与领导", "questions": ["我的直属管理者支持我的成长与发展。", "我能定期得到关于工作表现的反馈。", "我可以安心地向管理者表达想法和不同意见。", "管理层清晰地传达了公司的方向。", "我信任公司的高层团队。"]},
+        {"key": "culture_belonging", "label": "文化与归属", "questions": ["我在这家公司有归属感。", "我可以在工作中做真实的自己。", "同事之间彼此尊重。", "公司践行了它所倡导的价值观。", "我为在这里工作感到自豪。"]},
+        {"key": "environment", "label": "工作环境", "questions": ["我有把工作做好所需的工具和资源。", "我能管理好自己的工作量，保持工作与生活的平衡。", "我在如何工作上拥有灵活度。", "跨团队协作是顺畅的。"]},
+        {"key": "rewards", "label": "薪酬与福利", "questions": ["就我的岗位而言，我觉得自己得到了公平的报酬。", "福利有竞争力，能满足我的需要。"]},
+        {"key": "growth", "label": "成长与发展", "questions": ["我在公司里能看到清晰的发展路径。", "我有机会发展新的技能。", "在当前岗位上我在学习和成长。"]},
+        {"key": "overall", "label": "综合意愿", "questions": ["整体而言，我认为这是一个值得工作的好地方。", "两年后我很可能还在这里工作。"]}
+      ]
+    },
+    "enps": {
+      "name": "eNPS 脉冲",
+      "source": "Employee Net Promoter Score",
+      "scenario": "月度/季度快测，追踪趋势",
+      "scale_override": {"type": "nps-0-10", "min": 0, "max": 10, "note": "第 1 题用 0–10 推荐意愿量表；推荐者 9–10、被动者 7–8、贬损者 0–6，eNPS = 推荐者% − 贬损者%。其余题目沿用 1–5。"},
+      "dimensions": [
+        {"key": "enps", "label": "推荐意愿（eNPS）", "questions": ["你有多大可能把这里推荐给朋友或熟人来工作？（0–10）"]},
+        {"key": "pulse", "label": "脉冲快测", "questions": ["最近这段时间，我对工作是投入的。", "我在这里有归属感。", "我能得到管理者的支持。", "我看得到成长的机会。"]},
+        {"key": "open", "label": "开放反馈", "questions": ["用一个词形容你最近在这里的体验？（开放题）", "关于我们做得怎么样，你有什么想说的？（开放题）"]}
+      ]
+    },
+    "belonging_inclusion": {
+      "name": "归属与包容",
+      "source": "归属感 / 公平 / 包容框架",
+      "scenario": "关注文化、归属感与公平体验",
+      "dimensions": [
+        {"key": "belonging", "label": "归属感", "questions": ["我在这家公司有归属感。", "我可以在工作中做真实的自己。", "我为自己是团队的一员感到自豪。"]},
+        {"key": "fairness", "label": "公平", "questions": ["无论背景如何，人们都被公平对待。", "晋升和机会的分配是公平透明的。", "我觉得自己得到了公平的报酬。"]},
+        {"key": "inclusion", "label": "包容", "questions": ["我在重要决策中被包含进来。", "我的观点被重视、被听见。", "不同意见在这里可以被安全地表达。"]},
+        {"key": "respect_safety", "label": "尊重与安全", "questions": ["同事之间彼此尊重。", "如果我遇到不公正对待，我知道可以向谁反映且不会被报复。"]}
+      ]
+    },
+    "psych_safety": {
+      "name": "心理安全感与团队协作",
+      "source": "Amy Edmondson 团队心理安全感量表",
+      "scenario": "测团队氛围、发声安全与协作质量",
+      "dimensions": [
+        {"key": "safety", "label": "心理安全感", "questions": ["在我的团队里，犯了错不会被针对。", "团队成员可以提出难题和棘手的问题。", "团队接纳与自己不同的意见和背景。", "在这个团队里冒险（提出新想法）是安全的。", "向团队其他成员求助是容易的。"]},
+        {"key": "collaboration", "label": "协作质量", "questions": ["团队成员愿意为把工作做好而互相配合。", "没有人会故意做出损害我努力的行为。", "和团队一起工作时，我的独特技能和才能被重视和利用。"]},
+        {"key": "voice", "label": "发声与改进", "questions": ["我可以坦率地向团队指出问题，而不担心被针对。", "团队会公开讨论失败并从中学习，而不是掩盖。"]}
+      ]
+    }
+  }
+}

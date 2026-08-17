@@ -1,0 +1,5 @@
+{
+  "canvas": {"width": 1200, "height": 675, "ratio": "16:9", "background": "#FFFFFF", "grid": 8},
+  "intent": {"core_message": "系统出洞察，改进决定仍由人做", "subtitle": "整理事实与短板；管理者和 HR 决定改什么", "composition": "boundary", "focus_node": "handoff"},
+  "style": {"theme": "geometry-minimal", "accent_color": "#2F6BFF", "line_weight": 1, "corner_radius": 0}
+}

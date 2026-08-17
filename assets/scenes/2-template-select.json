@@ -1,0 +1,5 @@
+{
+  "canvas": {"width": 1200, "height": 675, "ratio": "16:9", "background": "#FFFFFF", "grid": 8},
+  "intent": {"core_message": "五套经典模板，按目的选型", "subtitle": "Q12 / 敬业度×体验 / eNPS / 归属包容 / 心理安全感", "composition": "templates", "focus_node": "select"},
+  "style": {"theme": "geometry-minimal", "accent_color": "#2F6BFF", "line_weight": 1, "corner_radius": 0}
+}

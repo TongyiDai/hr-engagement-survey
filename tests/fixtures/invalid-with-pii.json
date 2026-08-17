@@ -1,0 +1,10 @@
+{
+  "survey": {"template": "q12", "period": "2026-Q1"},
+  "overall": {"score": 3.4},
+  "dimensions": [{"key": "x", "label": "示例", "score": 3.4}],
+  "segments": {
+    "部门": [
+      {"name": "研发", "count": 90, "score": 3.6, "姓名": "张三"}
+    ]
+  }
+}
