@@ -14,6 +14,12 @@
   <img src="assets/boards/1-survey-loop.png" alt="调研闭环：选型→生成→匿名收集→聚合分析→行动计划" width="90%">
 </p>
 
+<p align="center">
+  <img src="assets/hr-engagement-survey-demo.gif" alt="匿名聚合的敬业度结果 → 洞察，不做个人识别" width="900" />
+</p>
+
+<p align="center"><sub>匿名聚合的敬业度结果 → 洞察，不做个人识别</sub></p>
+
 ## 价值与适用场景
 
 很多敬业度调研失败，不是因为问卷设计得不好，而是**收集完反馈就没有下文**——员工看不到任何改变，下一次就不再说真话。这枚 Skill 解决的正是「从收集到行动」的完整链路，同时把匿名当作硬约束守住。
